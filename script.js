@@ -14,6 +14,17 @@
     });
   }
 
+  // Highlight active nav link based on current page
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(function (link) {
+    const href = link.getAttribute('href');
+    if (href === currentPath || (currentPath === 'index.html' && href === 'index.html')) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
   const sections = document.querySelectorAll('main [id]');
 
   if (sections.length) {
