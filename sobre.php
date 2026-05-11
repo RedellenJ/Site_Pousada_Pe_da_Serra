@@ -1,3 +1,21 @@
+<?php
+require_once 'classes/WhatsApp.php';
+require_once 'classes/Contato.php';
+
+$whatsapp = new WhatsApp(
+    "5535997583373",
+    "Olá! Gostaria de saber mais sobre a Pousada Pé da Serra."
+);
+
+$contato = new Contato(
+    "(35) 99758-3373",
+    "@pousada_pedaserra_stl",
+    "Rod. LMG, KM 3, São Tomé das Letras - MG, 37408-000",
+    "14h",
+    "12h"
+);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -12,18 +30,19 @@
 
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <header class="header" id="header">
     <div class="header__container">
-      <a href="index.html" class="header__logo">
+      <a href="index.php" class="header__logo">
         <img src="Img/Logo.png" alt="Pousada Pé da Serra" />
       </a>
 
       <nav class="nav" id="nav">
         <ul class="nav__list">
-          <li><a href="index.html" class="nav__link">Início</a></li>
-          <li><a href="sobre.html" class="nav__link">Sobre Nós</a></li>
+          <li><a href="index.php" class="nav__link">Início</a></li>
+          <li><a href="sobre.php" class="nav__link">Sobre Nós</a></li>
           <li><a href="#quartos" class="nav__link">Quartos</a></li>
           <li><a href="#experiencias" class="nav__link">Experiências</a></li>
           <li><a href="#galeria" class="nav__link">Galeria</a></li>
@@ -86,8 +105,8 @@
       <div class="footer__col">
         <h3 class="footer__title">Atalhos</h3>
         <ul class="footer__links">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="sobre.html">Sobre Nós</a></li>
+          <li><a href="index.php">Início</a></li>
+          <li><a href="sobre.php">Sobre Nós</a></li>
           <li><a href="#quartos">Quartos</a></li>
           <li><a href="#experiencias">Experiências</a></li>
           <li><a href="#galeria">Galeria</a></li>
@@ -120,6 +139,9 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
-</body>
+    <?php 
+      $whatsapp->exibirBotaoFlutuante(); 
+    ?>
+    <script src="script.js"></script>
+  </body>
 </html>
