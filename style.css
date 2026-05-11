@@ -313,6 +313,10 @@ address { font-style: normal; }
   gap: 1.5rem;
 }
 
+.gallery__link {
+  display: block;
+}
+
 .gallery__image {
   width: 100%;
   height: 250px;
@@ -324,6 +328,49 @@ address { font-style: normal; }
 .gallery__image:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1000;
+}
+
+.gallery-modal.is-open {
+  display: flex;
+}
+
+.gallery-modal__image {
+  max-width: min(92vw, 1100px);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.gallery-modal__close:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 @media (max-width: 960px) {
