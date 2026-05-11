@@ -719,3 +719,7 @@ address { font-style: normal; }
     color: #333;
     margin-top: 5px;
 }
+
+.testimonials {
+    margin-bottom: 100px;
+}
