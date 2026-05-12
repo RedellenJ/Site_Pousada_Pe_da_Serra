@@ -609,6 +609,152 @@ address { font-style: normal; }
   transform: translateY(-2px);
 }
 
+.benefits,
+.testimonials,
+.gallery {
+  padding: 6rem 0;
+}
+
+.benefits {
+  background: linear-gradient(180deg, #ffffff 0%, #f4f7ef 100%);
+}
+
+.benefits__grid,
+.testimonials__grid,
+.gallery__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.benefits__grid {
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+}
+
+.benefit-card,
+.testimonial-card {
+  background-color: var(--clr-white);
+  border: 1px solid rgba(52, 69, 50, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(52, 69, 50, 0.08);
+}
+
+.benefit-card {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.benefit-icon {
+  width: 68px;
+  height: 68px;
+  margin: 0 auto 1rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  background: linear-gradient(135deg, rgba(35, 148, 21, 0.12), rgba(255, 242, 52, 0.32));
+}
+
+.benefit-title {
+  color: var(--clr-dark);
+  margin-bottom: 0.75rem;
+}
+
+.benefit-desc {
+  color: #555;
+  line-height: 1.7;
+}
+
+.testimonials {
+  background-color: #f8f8f3;
+}
+
+.testimonials__grid {
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
+.testimonial-card {
+  padding: 2rem;
+}
+
+.testimonial-text {
+  color: #495244;
+  line-height: 1.9;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+}
+
+.testimonial-author {
+  color: var(--clr-green);
+  font-size: 1rem;
+}
+
+.gallery {
+  background-color: var(--clr-white);
+}
+
+.gallery__grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.gallery__link {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+}
+
+.gallery__image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.gallery__link:hover .gallery__image {
+  transform: scale(1.06);
+  filter: saturate(1.05);
+}
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.82);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  z-index: 1200;
+}
+
+.gallery-modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gallery-modal__close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.14);
+  color: var(--clr-white);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.gallery-modal__image {
+  max-width: min(1100px, 100%);
+  max-height: 88vh;
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+}
+
 @media (max-width: 768px) {
   .rooms {
     padding: 4rem 1rem;
@@ -616,6 +762,22 @@ address { font-style: normal; }
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .benefits,
+  .testimonials,
+  .gallery {
+    padding: 4rem 0;
+  }
+
+  .benefits__grid,
+  .testimonials__grid,
+  .gallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery__image {
+    height: 220px;
   }
 
   .room-card__image {

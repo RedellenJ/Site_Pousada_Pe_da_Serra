@@ -25,7 +25,7 @@
   }
 
   // Highlight active nav link based on current page
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentPath = window.location.pathname.split('/').pop() || 'index.php';
   const currentHash = window.location.hash;
 
   if (currentHash) {
@@ -33,7 +33,10 @@
   } else {
     navLinks.forEach(function (link) {
       const href = link.getAttribute('href');
-      if (href === currentPath || (currentPath === 'index.html' && href === 'index.html')) {
+      if (
+        href === currentPath ||
+        ((currentPath === 'index.php' || currentPath === 'index.html') && (href === 'index.php' || href === 'index.html'))
+      ) {
         link.classList.add('active');
       } else {
         link.classList.remove('active');
