@@ -12,7 +12,7 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-239415?style=for-the-badge" alt="Status" />
   <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-344532?style=for-the-badge" alt="Frontend" />
-  <img src="https://img.shields.io/badge/Backend-PHP-000000?style=for-the-badge" alt="Backend" />
+  <img src="https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=for-the-badge" alt="Hospedagem estática na Netlify" />
 </p>
 
 ---
@@ -44,7 +44,7 @@ Rodape
 ## Funcionalidades
 
 - Navegação com destaque automatico do item ativo
-- Listagem dinamica das suites com cards renderizados em PHP
+- Cards das suítes em HTML estático com links personalizados para reserva
 - Link de reserva por suite com mensagem personalizada no WhatsApp
 - Botao flutuante de WhatsApp para atendimento rapido
 - Galeria de imagens com modal e fechamento por clique externo ou tecla ESC
@@ -53,26 +53,12 @@ Rodape
 
 ## Stack utilizada
 
-### Frontend
-
-- HTML
-- CSS
-- JavaScript
-
-### Backend
-
-- PHP
-- Programacao orientada a objetos (classes para dominio de pousada, quartos e contato)
+HTML, CSS e JavaScript. O site é estático e não precisa de PHP ou de um processo de build.
 
 ## Estrutura de pastas
 
 ```text
 Site_Pousada_Pe_da_Serra/
-  classes/
-    Contato.php
-    Pousada.php
-    Quarto.php
-    WhatsApp.php
   Img/
     Galeria/
       Imagem 1.jpeg
@@ -86,26 +72,20 @@ Site_Pousada_Pe_da_Serra/
       ...
       quarto6.jpg
     Logo.png
-  index.php
-  sobre.php
+  index.html
+  sobre.html
   script.js
   style.css
 ```
 
-## Como rodar localmente
+## Como publicar na Netlify
 
-### 1. Subir servidor PHP
+1. Envie este repositório ao GitHub.
+2. Na Netlify, escolha **Add new site** → **Import an existing project** e conecte o repositório.
+3. Deixe o comando de build vazio e o diretório de publicação como `.` (raiz do projeto).
+4. Clique em **Deploy site**. A Netlify servirá `index.html` automaticamente.
 
-No terminal, dentro da raiz do projeto:
-
-```powershell
-cd "C:\Users\User\Desktop\Area De Trabalho\Repositorio Local\Site_Pousada_Pe_da_Serra"
-php -S 127.0.0.1:8000
-```
-
-Aplicação disponivel em:
-
-- http://127.0.0.1:8000/index.php
+Para abrir localmente, abra `index.html` no navegador. Também é possível iniciar um servidor local com `python -m http.server 8000` e acessar `http://localhost:8000`.
 
 ## Proximos passos
 
