@@ -35,35 +35,25 @@ A pousada fica em São Thomé das Letras, destino conhecido pelas paisagens da s
 ### Página inicial
 
 <p align="center">
-  <img alt="Página inicial atual do site da Pousada Pé da Serra" src="Img/README/home.jpg" />
+  <img width="1895" alt="Página inicial do site da Pousada Pé da Serra" src="https://github.com/user-attachments/assets/c4476b0c-c992-464e-8a93-41468a5fed42" />
 </p>
 
 ### Suítes
 
 <p align="center">
-  <img alt="Seção atual das suítes da pousada" src="Img/README/quartos.jpg" />
-</p>
-
-### Feedbacks dos hóspedes
-
-<p align="center">
-  <img alt="Avaliações de hóspedes na seção de feedbacks" src="Img/README/feedbacks.jpg" />
-</p>
-
-<p align="center">
-  <img alt="Continuação das avaliações de hóspedes" src="Img/README/feedbacks-completo.jpg" />
+  <img width="1891" alt="Seção de suítes do site" src="https://github.com/user-attachments/assets/8b500e97-be22-48c3-a5c1-33019db8f14c" />
 </p>
 
 ### Galeria
 
 <p align="center">
-  <img alt="Galeria atual de imagens da pousada" src="Img/README/galeria.jpg" />
+  <img width="1898" alt="Galeria de imagens da pousada" src="https://github.com/user-attachments/assets/9cb801f2-f4b3-4592-8210-b3dfbd57b3c1" />
 </p>
 
-### Contato e localização
+### Rodapé e informações de contato
 
 <p align="center">
-  <img alt="Rodapé atual com informações de contato e localização" src="Img/README/contato.jpg" />
+  <img width="1898" alt="Rodapé com informações de contato e localização" src="https://github.com/user-attachments/assets/edeee1eb-ef5a-4289-aeed-774b8da0ab71" />
 </p>
 
 ## Tecnologias
@@ -81,7 +71,6 @@ Site_Pousada_Pe_da_Serra/
 ├── Img/
 │   ├── Galeria/       # Imagens da pousada e avaliações
 │   ├── Suíte/         # Fotos das suítes
-│   ├── README/        # Capturas de tela usadas neste documento
 │   └── Logo.png
 ├── classes/           # Componentes PHP de pousada, quarto, contato e WhatsApp
 ├── index.html         # Página inicial
