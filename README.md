@@ -46,8 +46,6 @@ A pousada fica em São Thomé das Letras, destino conhecido pelas paisagens da s
 
 ### Feedbacks dos hóspedes
 
-[![Avaliações de hóspedes na seção de feedbacks](Img/README/feedbacks.jpg)](Img/README/feedbacks.jpg)
-
 [![Continuação das avaliações de hóspedes](Img/README/feedbacks-completo.jpg)](Img/README/feedbacks-completo.jpg)
 
 ### Galeria
