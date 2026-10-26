@@ -29,17 +29,19 @@
 
 html {
   scroll-behavior: auto;
+  scroll-padding-top: calc(var(--header-h) + 12px);
 }
 
 body {
   font-family: var(--font-main);
   color: var(--clr-black);
   background-color: var(--clr-white);
+  padding-top: var(--header-h);
 }
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 ul { list-style: none; }
@@ -47,9 +49,14 @@ a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 address { font-style: normal; }
 
+section[id] {
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
+
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 100;
   width: 100%;
   height: var(--header-h);
@@ -399,7 +406,12 @@ address { font-style: normal; }
   }
 
   .header {
-    position: relative;
+    position: fixed;
+    height: auto;
+  }
+
+  .header__container {
+    min-height: var(--header-h);
   }
 
   .hero__title {

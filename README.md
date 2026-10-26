@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  🌐 <strong>Site hospedado:</strong> <a href="https://pousadapedaserra.netlify.app/">pousadapedaserra.netlify.app</a>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Projeto-Site%20institucional-239415?style=for-the-badge" alt="Site institucional" />
   <img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS%20%7C%20JavaScript-344532?style=for-the-badge" alt="HTML, CSS e JavaScript" />
 </p>
@@ -30,7 +34,7 @@ A pousada fica em São Thomé das Letras, destino conhecido pelas paisagens da s
 - **Contato e localização:** atalhos para WhatsApp e Instagram, além de mapa incorporado.
 - **Navegação entre páginas:** página inicial e página “Sobre”, com acesso às principais seções.
 
-## Capturas de tela
+## Capturas de tela (tema escuro)
 
 ### Página inicial
 

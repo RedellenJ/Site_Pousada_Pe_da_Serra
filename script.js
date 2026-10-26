@@ -19,6 +19,22 @@
   let scrollAnimationFrame = null;
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 
+  function syncHeaderHeight() {
+    if (!header) return;
+    const height = Math.ceil(header.getBoundingClientRect().height) + 'px';
+    if (document.documentElement.style.getPropertyValue('--header-h') !== height) {
+      document.documentElement.style.setProperty('--header-h', height);
+    }
+  }
+
+  if (header) {
+    syncHeaderHeight();
+    window.addEventListener('resize', syncHeaderHeight);
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(syncHeaderHeight).observe(header);
+    }
+  }
+
   function applyTheme(theme, savePreference) {
     document.documentElement.dataset.theme = theme;
     if (themeToggle) {
